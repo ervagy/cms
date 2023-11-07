@@ -1,0 +1,53 @@
+#about {
+  background-color: $aaron;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .marcus {
+    flex: 1;
+    margin-left: 3em;
+    margin-top: 50px;
+  }
+  .text {
+    flex: 2;
+    padding: 2em;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+  }
+  .button {
+    color: black;
+    width: 157px;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  #about {
+    flex-direction: column;
+    padding-bottom: 50px;
+    .super-headline {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 0.5em;
+    }
+    .text {
+      padding: 1em !important;
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+ 
+}

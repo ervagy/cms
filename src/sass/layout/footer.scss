@@ -1,0 +1,29 @@
+footer {
+  background-color: $bggray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2em;
+  color: $text;
+  font-family: "SoruceSans", sans-serif;
+  line-height: 1.5;
+
+  .footer_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: $detail;
+    text-decoration: none;
+
+    &:hover {
+      color: $text;
+    }
+  }
+}
+@include breakpoint(0, $mobile) {
+  footer {
+    flex-direction: column;
+  }
+}

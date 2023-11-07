@@ -1,0 +1,38 @@
+// MAX-WIDTH CONTAINER SIZE
+$max-width: 1920;
+
+// BREAKPOINTS
+$mobile: 599;
+$desktop: $mobile + 1;
+
+// COLORS
+// $copy: ;
+// $bgcolor: ;
+$bggray: hsl(207, 8%, 22%);
+$primary: red;
+$heading: #d5874c;
+$detail: #f4a76c;
+$lightgray: #f7f7f7;
+$aaron: #fff7f2;
+$text: #fff;
+$workgray: #363636;
+$icongray: #595959;
+$numbergray: #d5d5d5;
+
+//padding
+$pd: 20;
+$padding_s: rem($pd, $pd);
+
+@mixin marginBottom {
+  margin-bottom: 2em;
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

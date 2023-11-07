@@ -1,0 +1,70 @@
+#news {
+  padding: 40px;
+  article {
+    background-color: $lightgray;
+    max-height: 600px;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    p {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+  
+  }
+  .articles {
+    display: flex;
+    flex-direction: row;
+  }
+  a.button{
+    color: #000;
+    &:hover{
+      color: $text;
+    }
+  }
+  h3 a{
+    text-decoration: none;
+    color: $detail;
+    font-size: 28px;
+  }
+}
+@include breakpoint(0, $mobile) {
+  #news {
+    .articles {
+      display: flex;
+      overflow-x: scroll;
+    }
+    padding: 20px;
+    article {
+      min-width: 70%;
+      padding: 0.5em;
+      margin-left: 0.5em;
+      margin-right: 1em;
+      margin-top: 1em;
+      img {
+        max-height: 40%;
+      }
+    }
+    p {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+    
+  }
+ 
+}
+
+@include breakpoint($desktop) {
+  #news {
+    article img{
+      min-height: 50%;
+      width: 100%;
+    }
+  }
+}

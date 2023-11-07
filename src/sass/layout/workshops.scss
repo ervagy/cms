@@ -1,0 +1,196 @@
+#workshops {
+  padding: 100px 22px 22px 22px;
+  .button {
+    margin-top: 2em !important;
+    color: $text;
+  }
+  .workshops {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .level {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+    }
+    .level_text {
+      background-color: $workgray;
+      width: 60%;
+      padding: 2em;
+      color: $text;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+  }
+  .jumpicon {
+    background-color: $icongray;
+    padding: 1em;
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+    @include centered;
+  }
+  img.icon {
+    max-height: 80%;
+    max-width: 70%;
+  }
+  .number {
+    color: $bggray;
+    font-size: 200px;
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  #workshops {
+    h3 {
+      font-size: 22px;
+    }
+    padding: 50px 0px 50px 0px;
+
+    .workshops {
+      .level {
+        flex-direction: column;
+        margin-bottom: 4em;
+      }
+      .level_text {
+        width: 100%;
+        height: 50vh;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 5vh;
+        &_first {
+          margin-right: 2em;
+        }
+        &_second {
+          @include centered;
+        }
+        padding: 1em;
+
+        .zitat {
+          @include centered;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 2em;
+          blockquote {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .number_div {
+        @include centered;
+        z-index: 1;
+        margin-left: 20vw;
+        margin-bottom: 20px;
+      }
+
+      .number {
+        font-size: 20px;
+        background-color: $numbergray;
+        border-radius: 50%;
+        padding: 0.5;
+        width: 37px;
+        height: 37px;
+        @include centered;
+        color: $heading;
+        margin-left: 40px;
+      }
+    }
+    .jumpicon {
+      position: absolute;
+      margin-top: -20px;
+      z-index: 2;
+    }
+    .center_div{
+      @include centered;
+    }
+    img.icon {
+      width: 100%;
+    }
+  }
+  img.quote_icon {
+    width: 50px;
+  }
+  .description_workshop {
+    min-height: 20vh;
+    padding: 1em;
+    .super-headline {
+      font-weight: bolder;
+    }
+  }
+  .button {
+    font-size: 12px;
+  }
+}
+
+@include breakpoint($desktop) {
+  #workshops {
+    padding-top: 50px;
+    .jumpicon{
+      position: relative;
+    }
+    .quote_icon{
+      width: 70%;
+    }
+    .level_text{
+      margin-left: -12px;
+    }
+    .level3 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .level_text_first{
+        order: 1;
+      }
+      .jumpicon{
+        order: 2;
+      }
+      .zitat{
+        order: 3;
+      }
+    }
+    .level2 {
+      display: flex;
+      justify-content: center;
+      .level_text_first{
+        order: 3;
+      }
+      .jumpicon{
+        order: 2;
+      }
+      .zitat{
+        order: 1;
+      }
+    }
+    .level1 {
+      display: flex;
+      justify-content: flex-start;
+      .level_text_first{
+        order: 2;
+      }
+      .jumpicon{
+        order: 1;
+      }
+      .zitat{
+        order: 3;
+      }
+    }
+    .level_text_first{
+      width: 300px;
+    }
+    .number_div{
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .number{
+        font-weight: bolder;
+      }
+    }
+    .zitat{
+      padding: 1em;
+    }
+  }
+}

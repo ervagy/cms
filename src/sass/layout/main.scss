@@ -1,0 +1,70 @@
+main {
+  * {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    overflow: hidden;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .super-headline {
+    color: $bggray;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  h2,
+  h3 {
+    color: $heading;
+  }
+  h2 {
+    font-size: 58px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
+  section {
+    min-height: 300px;
+    justify-content: center;
+  }
+  .button {
+    @include centered;
+    background-color: none;
+    color: $detail;
+    border: 1px solid $detail;
+    padding: 10px;
+    width: 180px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $bggray;
+      color: $text;
+      @include transition;
+    }
+  }
+  a.button {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .m_bottom {
+    margin-bottom: 2em;
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  main {
+    h2 {
+      font-size: 28px;
+    }
+    .super-headline {
+      font-size: 16px;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    font-size: 16px;
+  }
+}
+
+@include breakpoint($desktop) {
+  main {
+  }
+}

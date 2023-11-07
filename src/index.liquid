@@ -1,0 +1,160 @@
+---
+layout: primary
+title: Marcus G. Miller | Home
+---
+    <main>
+      <section id="workshops">
+        <div class="description_workshop">
+          <p class="super-headline">
+            Find your entrance level & book a workshop with Marcus
+          </p>
+          <h2>If you never start, you will never know.</h2>
+        </div>
+
+        <div class="workshops">
+          <div class="level3 level">
+            <div class="number_div">
+              <p class="number">3</p>
+            </div>
+            <div class="center_div">
+              <!--verstehe nicht, wie ich das Icon in der Desktop ansicht ausrichten kann-->
+            <div class="jumpicon">
+              <img
+                class="icon"
+                src="./images/rise.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+          </div>
+            <div class="level_text">
+              <div class="level_text_first">
+                <h3>As pro as you can get</h3>
+                <p class="m_bottom">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Excepturi harum maxime repellendus labore, debitis iure.
+                </p>
+                <a href="#" class="button">Book Workshop</a>
+              </div>
+              <div class="zitat">
+                <img
+                  class="quote_icon"
+                  src="./images/quote.svg"
+                  alt="quote sign"
+                />
+                <blockquote>Respect your talent!</blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="level2 level">
+            <div class="number_div">
+              <p class="number">2</p>
+            </div>
+            <div class="center_div">
+            <div class="jumpicon">
+              <img
+                class="icon"
+                src="./images/up.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+          </div>
+            <div class="level_text">
+              <div class="level_text_first">
+                <h3>Aspire more</h3>
+                <p class="m_bottom">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Excepturi harum maxime repellendus labore, debitis iure.
+                </p>
+                <a href="#" class="button">Book Workshop</a>
+              </div>
+              <div class="zitat">
+                <img
+                  class="quote_icon"
+                  src="./images/quote.svg"
+                  alt="quote sign"
+                />
+                <blockquote>Respect your talent!</blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="level1 level">
+            <div class="number_div">
+              <p class="number">1</p>
+            </div>
+            <div class="center_div">
+            <div class="jumpicon">
+              <img
+                class="icon"
+                src="./images/stretch.svg"
+                alt="Icon showing dancer stretching her leg up to her nose."
+              />
+            </div>
+          </div>
+            <div class="level_text">
+              <div class="level_text_first">
+                <h3>Learn the Basics profoundly</h3>
+                <p class="m_bottom">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Excepturi harum maxime repellendus labore, debitis iure.
+                </p>
+                <a href="#" class="button">Book Workshop</a>
+              </div>
+              <div class="zitat">
+                <img
+                  class="quote_icon"
+                  src="./images/quote.svg"
+                  alt="quote sign"
+                />
+                <blockquote>Respect your talent!</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="marcus">
+          <img src="images/marc.jpg" alt="marcus" />
+        </div>
+        <div class="text">
+          <p class="super-headline">Why I teach</p>
+          <h2>Hi, I'm Marcus!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            itaque incidunt, nihil, recusandae autem aut perferendis reiciendis
+            a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+            asperiores consequatur consectetur ipsum!
+          </p>
+          <p class="m_bottom">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            itaque incidunt, nihil, recusandae autem aut perferendis reiciendis
+            a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur
+            asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Placeat itaque incidunt, nihil,
+            recusandae autem aut perferendis reiciendis a neque veniam quibusdam
+            animi ex tempora reprehenderit, aspernatur asperiores consequatur
+            consectetur ipsum!
+          </p>
+
+          <a href="" class="button">Learn more</a>
+        </div>
+      </section>
+      <section id="news">
+        <p class="super-headline">Making waves since 2004</p>
+        <h2>In the News</h2>
+        <div class="articles">
+          {% assign news = collections.news | reverse %}
+          {% for n in news limit:3 %}
+          <article>
+              <h3><a href='{{ n.url }}'>{{ n.data.title }}</a> – </h3> 
+              <img
+              src="{{n.data.images}}"
+              alt="Marcus performing at the Sydney dance festival 2022"/>
+              <p>{{ n.data.excerpt }}</p>
+              <a href="#" class="button">Read more</a>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+    </main>

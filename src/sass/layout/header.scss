@@ -1,0 +1,242 @@
+header {
+  background-image: url(../images/marco.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+  font-family: "SoruceSans", sans-serif !important;
+  font-weight: 100;
+  height: 100vh;
+  .believe {
+    h2 {
+      color: $detail;
+      font-size: 45px;
+    }
+    .header_text {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+    }
+    .button {
+      background-color: none;
+      color: $text;
+      border: 1px solid $detail;
+      padding: 1em;
+      margin-left: 0;
+      margin-top: 2em;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $bggray;
+        color: $text;
+        @include transition;
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .logo {
+      h1 {
+        color: $text;
+        border-bottom: none !important;
+        margin: 0;
+        text-decoration: none;
+      }
+    }
+    nav {
+      background-color: transparent;
+      a {
+        text-decoration: none;
+        color: $detail;
+        margin-bottom: 1em;
+        &:hover{
+          color: $text;
+          @include transition;
+        }
+      }
+      button.hamburger {
+        visibility: hidden;
+      }
+      .menu-nav {
+        list-style: none;
+        display: flex;
+        visibility: visible;
+
+        &__item {
+          margin-right: 20px;
+          border-bottom: 1px solid $detail;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(0, $mobile) {
+  header {
+    height: 70vh;
+    background-image: url(images/marco_klein.jpg);
+    background-position: 40%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    overflow-y: hidden;
+    .believe {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      .header_text {
+        height: 100vh;
+        width: 50%;
+        padding-right: 10vw;
+      }
+      h2 {
+        padding-left: 0;
+        color: $detail;
+        font-size: 38px;
+        align-items: flex-end;
+      }
+
+      a.button {
+        text-decoration: none;
+      }
+      .button {
+        margin-left: 0;
+        background-color: #000;
+      }
+    }
+
+    //burger
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        padding-top: 1em;
+        padding-left: 0.5em;
+        h1 {
+          color: $text;
+          border-bottom: none !important;
+          margin: 0;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+      nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        button.hamburger {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          height: 16px;
+          display: flex;
+          justify-content: flex-end;
+          visibility: visible;
+          margin-top: 1em;
+          margin-right: 0.5em;
+          z-index: 100;
+          width: 50px;
+
+          .hamburger_line1 {
+            position: absolute;
+            width: 23px;
+            height: 1px;
+            background-color: $detail;
+            @include transition;
+            &.open{
+              transform: rotate(45deg);
+              margin-top: 1em;
+            }
+          }
+          .hamburger_line2 {
+            position: absolute;
+            width: 16px;
+            height: 1px;
+            background-color: $detail;
+            @include transition;
+            margin-top: 1em;
+            &.open{
+              transform: rotate(-45deg);
+              width: 23px;
+            }
+          }
+         
+        }
+      
+      }
+      .menu-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: 2em;
+        width: 45%;
+        background-color: $bggray;
+        list-style-type: none;
+        transform: translateY(-120%);
+        @include transition;
+        visibility: visible;
+        position: absolute;
+        height: 100vh;
+        padding-top: 60px;
+        z-index: 10;
+
+        &.open {
+          transform: translateY(0);
+        }
+
+        &__item {
+          transform: translateX(100%);
+          @include transition;
+          margin-bottom: 2em;
+          border: none !important;
+          overflow-y: hidden;
+
+          &.open {
+            transform: translateX(0);
+          }
+        }
+
+        &__link {
+          margin-bottom: 4em;
+          text-transform: none;
+          color: $text;
+          padding: 2em 0;
+          font-size: 22px;
+          @include transition;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($desktop) {
+  header {
+    background-image: url(../images/marco.jpg);
+    .believe {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding-left: 15vh;
+      height: 45vh;
+    }
+    button#hamburger {
+      visibility: hidden;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+}
