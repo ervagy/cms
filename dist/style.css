@@ -1,0 +1,792 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "SourceSans";
+  src: url("../fonts/fonts/source-sans-pro/SourceSansPro-ExtraLight.otf") format("opentype");
+  src: url("../fonts/fonts/source-sans-pro/SourceSansPro-Regular.otf") format("opentype");
+  src: url("../fonts/fonts/source-sans-pro/SourceSansPro-Bold.otf") format("opentype");
+  src: url("../fonts/fonts/source-sans-pro/SourceSansPro-Light.otf") format("opentype");
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "SourceSans";
+  font-weight: 40;
+  overflow-x: hidden;
+}
+
+main * {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  overflow: hidden;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+main .super-headline {
+  color: hsl(207, 8%, 22%);
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+main h2,
+main h3 {
+  color: #d5874c;
+}
+main h2 {
+  font-size: 58px;
+}
+main h3 {
+  font-size: 20px;
+}
+main section {
+  min-height: 300px;
+  justify-content: center;
+}
+main .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  color: #f4a76c;
+  border: 1px solid #f4a76c;
+  padding: 10px;
+  width: 180px;
+  text-transform: uppercase;
+}
+main .button:hover {
+  background-color: hsl(207, 8%, 22%);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+main a.button {
+  text-decoration: none;
+  font-weight: bold;
+}
+main .m_bottom {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  main {
+    font-size: 16px;
+  }
+  main h2 {
+    font-size: 28px;
+  }
+  main .super-headline {
+    font-size: 16px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+#workshops {
+  padding: 100px 22px 22px 22px;
+}
+#workshops .button {
+  margin-top: 2em !important;
+  color: #fff;
+}
+#workshops .workshops {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+#workshops .workshops .level {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+#workshops .workshops .level_text {
+  background-color: #363636;
+  width: 60%;
+  padding: 2em;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#workshops .jumpicon {
+  background-color: #595959;
+  padding: 1em;
+  border-radius: 150px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#workshops img.icon {
+  max-height: 80%;
+  max-width: 70%;
+}
+#workshops .number {
+  color: hsl(207, 8%, 22%);
+  font-size: 200px;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #workshops {
+    padding: 50px 0px 50px 0px;
+  }
+  #workshops h3 {
+    font-size: 22px;
+  }
+  #workshops .workshops .level {
+    flex-direction: column;
+    margin-bottom: 4em;
+  }
+  #workshops .workshops .level_text {
+    width: 100%;
+    height: 50vh;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    padding: 1em;
+  }
+  #workshops .workshops .level_text_first {
+    margin-right: 2em;
+  }
+  #workshops .workshops .level_text_second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #workshops .workshops .level_text .zitat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
+  }
+  #workshops .workshops .level_text .zitat blockquote {
+    font-size: 22px;
+  }
+  #workshops .workshops .number_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-left: 20vw;
+    margin-bottom: 20px;
+  }
+  #workshops .workshops .number {
+    font-size: 20px;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    padding: 0.5;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5874c;
+    margin-left: 40px;
+  }
+  #workshops .jumpicon {
+    position: absolute;
+    margin-top: -20px;
+    z-index: 2;
+  }
+  #workshops .center_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #workshops img.icon {
+    width: 100%;
+  }
+  img.quote_icon {
+    width: 50px;
+  }
+  .description_workshop {
+    min-height: 20vh;
+    padding: 1em;
+  }
+  .description_workshop .super-headline {
+    font-weight: bolder;
+  }
+  .button {
+    font-size: 12px;
+  }
+}
+@media (min-width: 37.5rem) {
+  #workshops {
+    padding-top: 50px;
+  }
+  #workshops .jumpicon {
+    position: relative;
+  }
+  #workshops .quote_icon {
+    width: 70%;
+  }
+  #workshops .level_text {
+    margin-left: -12px;
+  }
+  #workshops .level3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #workshops .level3 .level_text_first {
+    order: 1;
+  }
+  #workshops .level3 .jumpicon {
+    order: 2;
+  }
+  #workshops .level3 .zitat {
+    order: 3;
+  }
+  #workshops .level2 {
+    display: flex;
+    justify-content: center;
+  }
+  #workshops .level2 .level_text_first {
+    order: 3;
+  }
+  #workshops .level2 .jumpicon {
+    order: 2;
+  }
+  #workshops .level2 .zitat {
+    order: 1;
+  }
+  #workshops .level1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #workshops .level1 .level_text_first {
+    order: 2;
+  }
+  #workshops .level1 .jumpicon {
+    order: 1;
+  }
+  #workshops .level1 .zitat {
+    order: 3;
+  }
+  #workshops .level_text_first {
+    width: 300px;
+  }
+  #workshops .number_div {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #workshops .number_div .number {
+    font-weight: bolder;
+  }
+  #workshops .zitat {
+    padding: 1em;
+  }
+}
+footer {
+  background-color: hsl(207, 8%, 22%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2em;
+  color: #fff;
+  font-family: "SoruceSans", sans-serif;
+  line-height: 1.5;
+}
+footer .footer_text {
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  color: #f4a76c;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  footer {
+    flex-direction: column;
+  }
+}
+#news {
+  padding: 40px;
+}
+#news article {
+  background-color: #f7f7f7;
+  max-height: 600px;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+#news article p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+#news .articles {
+  display: flex;
+  flex-direction: row;
+}
+#news a.button {
+  color: #000;
+}
+#news a.button:hover {
+  color: #fff;
+}
+#news h3 a {
+  text-decoration: none;
+  color: #f4a76c;
+  font-size: 28px;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #news {
+    padding: 20px;
+  }
+  #news .articles {
+    display: flex;
+    overflow-x: scroll;
+  }
+  #news article {
+    min-width: 70%;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+  #news article img {
+    max-height: 40%;
+  }
+  #news p {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  #news img {
+    width: 100%;
+  }
+}
+@media (min-width: 37.5rem) {
+  #news article img {
+    min-height: 50%;
+    width: 100%;
+  }
+}
+#about {
+  background-color: #fff7f2;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+#about .marcus {
+  flex: 1;
+  margin-left: 3em;
+  margin-top: 50px;
+}
+#about .text {
+  flex: 2;
+  padding: 2em;
+}
+#about h2 {
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+#about .button {
+  color: black;
+  width: 157px;
+}
+#about .button:hover {
+  color: white;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #about {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  #about .super-headline {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  #about h2 {
+    font-size: 28px;
+    margin-bottom: 0.5em;
+  }
+  #about .text {
+    padding: 1em !important;
+  }
+  #about .text p {
+    margin-bottom: 1em;
+  }
+}
+header {
+  background-image: url(../images/marco.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+  font-family: "SoruceSans", sans-serif !important;
+  font-weight: 100;
+  height: 100vh;
+}
+header .believe h2 {
+  color: #f4a76c;
+  font-size: 45px;
+}
+header .believe .header_text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+header .believe a {
+  text-decoration: none;
+}
+header .believe .button {
+  background-color: none;
+  color: #fff;
+  border: 1px solid #f4a76c;
+  padding: 1em;
+  margin-left: 0;
+  margin-top: 2em;
+  text-transform: uppercase;
+}
+header .believe .button:hover {
+  background-color: hsl(207, 8%, 22%);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .nav .logo h1 {
+  color: #fff;
+  border-bottom: none !important;
+  margin: 0;
+  text-decoration: none;
+}
+header .nav nav {
+  background-color: transparent;
+}
+header .nav nav a {
+  text-decoration: none;
+  color: #f4a76c;
+  margin-bottom: 1em;
+}
+header .nav nav a:hover {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+header .nav nav button.hamburger {
+  visibility: hidden;
+}
+header .nav nav .menu-nav {
+  list-style: none;
+  display: flex;
+  visibility: visible;
+}
+header .nav nav .menu-nav__item {
+  margin-right: 20px;
+  border-bottom: 1px solid #f4a76c;
+}
+
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  header {
+    height: 70vh;
+    background-image: url(images/marco_klein.jpg);
+    background-position: 40%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    overflow-y: hidden;
+  }
+  header .believe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  header .believe .header_text {
+    height: 100vh;
+    width: 50%;
+    padding-right: 10vw;
+  }
+  header .believe h2 {
+    padding-left: 0;
+    color: #f4a76c;
+    font-size: 38px;
+    align-items: flex-end;
+  }
+  header .believe a.button {
+    text-decoration: none;
+  }
+  header .believe .button {
+    margin-left: 0;
+    background-color: #000;
+  }
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .nav .logo {
+    padding-top: 1em;
+    padding-left: 0.5em;
+  }
+  header .nav .logo h1 {
+    color: #fff;
+    border-bottom: none !important;
+    margin: 0;
+  }
+  header .nav .logo a {
+    text-decoration: none;
+  }
+  header .nav nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  header .nav nav button.hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 16px;
+    display: flex;
+    justify-content: flex-end;
+    visibility: visible;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    z-index: 100;
+    width: 50px;
+  }
+  header .nav nav button.hamburger .hamburger_line1 {
+    position: absolute;
+    width: 23px;
+    height: 1px;
+    background-color: #f4a76c;
+    transition: all 0.2s ease-in-out;
+  }
+  header .nav nav button.hamburger .hamburger_line1.open {
+    transform: rotate(45deg);
+    margin-top: 1em;
+  }
+  header .nav nav button.hamburger .hamburger_line2 {
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background-color: #f4a76c;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1em;
+  }
+  header .nav nav button.hamburger .hamburger_line2.open {
+    transform: rotate(-45deg);
+    width: 23px;
+  }
+  header .nav .menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-top: 2em;
+    width: 45%;
+    background-color: hsl(207, 8%, 22%);
+    list-style-type: none;
+    transform: translateY(-120%);
+    transition: all 0.2s ease-in-out;
+    visibility: visible;
+    position: absolute;
+    height: 100vh;
+    padding-top: 60px;
+    z-index: 10;
+  }
+  header .nav .menu-nav.open {
+    transform: translateY(0);
+  }
+  header .nav .menu-nav__item {
+    transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 2em;
+    border: none !important;
+    overflow-y: hidden;
+  }
+  header .nav .menu-nav__item.open {
+    transform: translateX(0);
+  }
+  header .nav .menu-nav__link {
+    margin-bottom: 4em;
+    text-transform: none;
+    color: #fff;
+    padding: 2em 0;
+    font-size: 22px;
+    transition: all 0.2s ease-in-out;
+  }
+  header .nav .menu-nav__link:hover {
+    color: #fff;
+  }
+}
+@media (min-width: 37.5rem) {
+  header {
+    background-image: url(../images/marco.jpg);
+  }
+  header .believe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 15vh;
+    height: 45vh;
+  }
+  header button#hamburger {
+    visibility: hidden;
+  }
+  header a {
+    text-decoration: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
